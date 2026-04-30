@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- AttackFlow - An editor for creating enriched Cyber Kill Chain assessments
+        Project Page: https://github.com/Pr0cella/AttackFlow
+    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -4052,7 +4055,7 @@
         // ============================================================
         // VERSION - Loaded dynamically from changelog
         // ============================================================
-        let APP_VERSION = '2.9.1';  // Fallback version
+        let APP_VERSION = '2.9.2';  // Fallback version
         
         async function loadVersion() {
             try {
@@ -10023,12 +10026,12 @@
             }
             
             // Convert to CSV string
-            // KCE-SEC-004: Prefix cells starting with formula characters to prevent injection
+            // Prefix cells containing formula characters with a tab character and wraps the cell content in double quotes
             const sanitizeForCsv = (value) => {
                 const str = String(value);
-                // Prefix with single quote if starts with formula characters
+                // prefix with tab and wrap in quotes
                 if (/^[=+\-@\t\r]/.test(str)) {
-                    return "'" + str;
+                    return '"' + "\t" + str + '"';
                 }
                 return str;
             };

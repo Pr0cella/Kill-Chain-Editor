@@ -1,5 +1,12 @@
 # Changelog
 ---
+## [2.9.2] - 2026-04-30
+
+### Added 
+- Small HTML Docstring with project info
+
+### Changed
+- **CSV Formula Injection Mitigation**: Cells starting with formula characters are now prefixed with a tab character (\t) and wrapped in double quotes instead of just the single quote prefix that was used previously
 
 ## [2.9.1] - 2026-02-28
 

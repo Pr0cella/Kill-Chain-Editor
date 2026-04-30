@@ -7,7 +7,7 @@
 
 const CONFIG = {
     // Application info
-    version: '2.9.1',
+    version: '2.9.2',
     changelogUrl: 'CHANGELOG.md',
     
     // Framework source files (for extraction scripts)
